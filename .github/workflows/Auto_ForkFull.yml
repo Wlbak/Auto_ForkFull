@@ -62,3 +62,30 @@ jobs:
           source_branch: "main"
           destination_branch: "jdrain"
           github_token: ${{ secrets.PAT }}
+          
+      - name: sync alist-org-alist
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/alist-org/alist.git"
+          source_branch: "main"
+          destination_branch: "alist"
+          github_token: ${{ secrets.PAT }}
+          
+      - name: sync alist-vaxilu-x-ui
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/vaxilu/x-ui.git"
+          source_branch: "main"
+          destination_branch: "x-ui"
+          github_token: ${{ secrets.PAT }}
+          
+      - name: sync alist-luolongfei-freenom
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/luolongfei/freenom.git"
+          source_branch: "main"
+          destination_branch: "freenom"
+          github_token: ${{ secrets.PAT }}
