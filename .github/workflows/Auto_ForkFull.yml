@@ -72,7 +72,7 @@ jobs:
           destination_branch: "alist"
           github_token: ${{ secrets.PAT }}
           
-      - name: sync alist-vaxilu-x-ui
+      - name: sync vaxilu-x-ui
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
@@ -81,11 +81,20 @@ jobs:
           destination_branch: "x-ui"
           github_token: ${{ secrets.PAT }}
           
-      - name: sync alist-luolongfei-freenom
+      - name: sync luolongfei-freenom
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
           source_repo: "https://github.com/luolongfei/freenom.git"
           source_branch: "main"
           destination_branch: "freenom"
+          github_token: ${{ secrets.PAT }}
+        
+      - name: sync BookerLiu-GeekDesk
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/BookerLiu/GeekDesk.git"
+          source_branch: "master"
+          destination_branch: "GeekDesk"
           github_token: ${{ secrets.PAT }}
