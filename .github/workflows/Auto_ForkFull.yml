@@ -1,4 +1,4 @@
-name: Auto_ForkFull1
+name: Auto_ForkFull
 on:
   schedule:
     - cron: '10 */3 * * *'
@@ -8,7 +8,7 @@ on:
   repository_dispatch:
     types: sync-auto-forkfull
 jobs:
-  repo-sync1:
+  repo-sync:
     env:
       PAT: ${{ secrets.PAT }} 
     runs-on: ubuntu-latest
