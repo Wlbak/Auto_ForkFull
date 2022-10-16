@@ -1,7 +1,7 @@
-name: Auto_ForkFull
+name: Auto_ForkFull1
 on:
   schedule:
-    - cron: '10 12 * * *'
+    - cron: '10 */3 * * *'
   workflow_dispatch:
   watch:
     types: started
