@@ -8,7 +8,7 @@ on:
   repository_dispatch:
     types: sync-auto-forkfull
 jobs:
-  repo-sync:
+  repo-sync1:
     env:
       PAT: ${{ secrets.PAT }} 
     runs-on: ubuntu-latest
