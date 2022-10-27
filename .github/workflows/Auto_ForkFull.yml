@@ -68,7 +68,7 @@ jobs:
         with:
           source_repo: "https://github.com/KingRan/KR.git"
           source_branch: "main"
-          destination_branch: "OpenCard
+          destination_branch: "OpenCard"
           github_token: ${{ secrets.PAT }}
 
       - name: sync alist-org-alist
