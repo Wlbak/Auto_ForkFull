@@ -17,24 +17,6 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: sync qitoqito-kedaya
-        uses: repo-sync/github-sync@v2
-        if: env.PAT
-        with:
-          source_repo: "https://github.com/qitoqito/kedaya.git"
-          source_branch: "main"
-          destination_branch: "kedaya"
-          github_token: ${{ secrets.PAT }}
-
-      - name: sync walle1798-WALL.E
-        uses: repo-sync/github-sync@v2
-        if: env.PAT
-        with:
-          source_repo: "https://github.com/walle1798/WALL.E.git"
-          source_branch: "master"
-          destination_branch: "WALL.E"
-          github_token: ${{ secrets.PAT }}
-
       - name: sync rpgrpg-qlfreenom
         uses: repo-sync/github-sync@v2
         if: env.PAT
@@ -42,33 +24,6 @@ jobs:
           source_repo: "https://github.com/rpgrpg/freenom-qinglong.git"
           source_branch: "main"
           destination_branch: "ql_freenom"
-          github_token: ${{ secrets.PAT }}
-
-      - name: sync msechen-jdv5
-        uses: repo-sync/github-sync@v2
-        if: env.PAT
-        with:
-          source_repo: "https://github.com/msechen/jdv5.git"
-          source_branch: "main"
-          destination_branch: "jdv5"
-          github_token: ${{ secrets.PAT }}
-
-      - name: sync msechen-jdrain
-        uses: repo-sync/github-sync@v2
-        if: env.PAT
-        with:
-          source_repo: "https://github.com/msechen/jdrain.git"
-          source_branch: "main"
-          destination_branch: "jdrain"
-          github_token: ${{ secrets.PAT }}
-
-      - name: sync KingRan-KR
-        uses: repo-sync/github-sync@v2
-        if: env.PAT
-        with:
-          source_repo: "https://github.com/KingRan/KR.git"
-          source_branch: "main"
-          destination_branch: "OpenCard"
           github_token: ${{ secrets.PAT }}
 
       - name: sync alist-org-alist
