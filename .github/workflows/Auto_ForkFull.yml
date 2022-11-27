@@ -61,3 +61,12 @@ jobs:
           source_branch: "master"
           destination_branch: "GeekDesk"
           github_token: ${{ secrets.PAT }}
+          
+      - name: sync sml2h3-ast_tools
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/sml2h3/ast_tools.git"
+          source_branch: "main"
+          destination_branch: "ast_tools"
+          github_token: ${{ secrets.PAT }}
