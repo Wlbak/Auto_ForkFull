@@ -70,3 +70,21 @@ jobs:
           source_branch: "main"
           destination_branch: "ast_tools"
           github_token: ${{ secrets.PAT }}
+
+      - name: sync 2dust-v2rayN
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/2dust/v2rayN.git"
+          source_branch: "master"
+          destination_branch: "v2rayN"
+          github_token: ${{ secrets.PAT }}
+        
+      - name: sync FranzKafkaYu-xui
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/FranzKafkaYu/x-ui.git"
+          source_branch: "main"
+          destination_branch: "魔改xui"
+          github_token: ${{ secrets.PAT }}
