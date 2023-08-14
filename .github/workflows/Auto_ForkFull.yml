@@ -88,3 +88,12 @@ jobs:
           source_branch: "main"
           destination_branch: "魔改xui"
           github_token: ${{ secrets.PAT }}
+
+      - name: sync rocky-uncompyle6
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/rocky/python-uncompyle6.git"
+          source_branch: "master"
+          destination_branch: "uncompyle6"
+          github_token: ${{ secrets.PAT }}
