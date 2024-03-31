@@ -97,3 +97,13 @@ jobs:
           source_branch: "master"
           destination_branch: "uncompyle6"
           github_token: ${{ secrets.PAT }}
+
+      - name: sync ACL4SSR
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/ACL4SSR/ACL4SSR.git"
+          source_branch: "master"
+          destination_branch: "ACL4SSR规则"
+          github_token: ${{ secrets.PAT }}
+
